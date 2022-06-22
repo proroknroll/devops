@@ -6,7 +6,7 @@ public without sharing class CanvasController {
     
     public void setacctExtId()
     {
-        //comment for a new change
+        //comment for a new change for US-8293
         system.debug('external id is: ' + acctExtId);
         List<account> accts = [select name from account where external_id__c =: acctExtId];
         if (accts <> null && accts.size() <> 0)
