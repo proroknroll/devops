@@ -6,7 +6,25 @@ public with sharing class LightningLoginFormControllerTest {
   LightningLoginFormController controller = new LightningLoginFormController();
   System.assertNotEquals(controller, null);
  }
+    
+    @istest
+    static void testLogin()
+    {
+        
+        LightningLoginFormController.login('username', 'password', 'startUrl');
+    }
+    
+    @istest
+    static void testGetForgotPasswordURL()
+    {
+        LightningLoginFormController.getForgotPasswordUrl();
+    }
 
+    @istest
+    static void testSetExperienceId()
+    {
+        LightningLoginFormController.setExperienceId('expId');
+    }
  @IsTest
  static void testIsUsernamePasswordEnabled() {
   System.assertEquals(true, LightningLoginFormController.getIsUsernamePasswordEnabled());
